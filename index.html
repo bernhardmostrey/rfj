@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rain, Fire and Jazz</title>
+    <style>
+        body, html {
+        }
+
+        body {
+            background-color: #262626;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+        }
+        /*.jwplayer {
+        	position: absolute !important;
+top: 0;
+left: 0;
+margin: 0;
+z-index: -1;
+height: 100% !important;
+        }*/
+audio {
+    margin-bottom: 10px;
+}
+        #container {
+            overflow: hidden;
+            display: none;
+            width: 300px;
+margin-top: 10px;
+        }
+
+        h3 {
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: Arial;
+            font-size: 14px;
+            margin: 6px 0px;
+        }
+
+        #copyright {
+            position: absolute;
+            bottom: -10px;
+            right: 10px;
+            color: white;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-family: Arial;
+        }
+    </style>
+    <!--<script src="http://jwpsrv.com/library/QOWWLPWMEeO+aCIAC0MJiQ.js"></script>-->
+</head>
+<body>
+    <video autoplay loop>
+        <source src="firevid.mp4" type="video/mp4" />
+        <source src="firevid.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+    </video>
+    <!--<div id='playerJhQFHBQvzjbQ'></div>
+<script type='text/javascript'>
+    jwplayer('playerJhQFHBQvzjbQ').setup({
+        file: 'firevid.mp4',
+        image: 'fire.jpg',
+        title: 'Fireplace',
+        width: '100%',
+        height: '100%',
+        controls: 'false',
+        mute: 'true',
+        aspectratio: '16:9',
+        autostart: 'true',
+        repeat: 'true'
+    });
+</script>-->
+    <img src="settings.png" alt="Alternate Text" width="25" id="settings" />
+    <div id="container" >
+        
+        <h3>Rain</h3>
+        <audio id="rain" autoplay controls loop style="width:300px; max-height: 40px;">
+            <source src="rain.mp3" type="audio/mpeg" />
+            <source src="rain.ogg" type="audio/ogg" />
+            Your browser does not support the audio element.
+        </audio>
+        <h3>Fire</h3>
+        <audio id="fire" autoplay controls loop style="width:300px; max-height: 40px;">
+            <source src="fire.mp3" type="audio/mpeg" />
+            <source src="fire.ogg" type="audio/ogg" />
+            Your browser does not support the audio element.
+        </audio>
+        <h3>Jazz</h3>
+        <audio id="jazz" autoplay controls loop style="width:300px; max-height: 40px;">
+            <source src="jazz.mp3" type="audio/mpeg" />
+            <source src="jazz.ogg" type="audio/ogg" />
+            Your browser does not support the audio element.
+        </audio>
+        <h3>Mashups by Candlelight</h3>
+        <audio controls loop style="width:300px; max-height: 40px;">
+            <source src="mashbycandle.mp3" type="audio/mpeg" />
+            <source src="mashbycandle.ogg" type="audio/ogg" />
+            Your browser does not support the audio element.
+        </audio>
+        <h3>Portrait In Jazz</h3>
+        <audio controls loop style="width:300px; max-height: 40px;">
+            <source src="portraitinjazz.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+        <!--<object width="250" height="250" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsPlaylist2160464261" name="gsPlaylist2160464261"><param name="movie" value="http://grooveshark.com/widget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&playlistID=21604642&p=0&bbg=262626&bth=262626&pfg=262626&lfg=262626&bt=ebebeb&pbg=ebebeb&pfgh=ebebeb&si=ebebeb&lbg=ebebeb&lfgh=ebebeb&sb=ebebeb&bfg=ff9900&pbgh=ff9900&lbgh=ff9900&sbh=ff9900" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/widget.swf" width="250" height="250"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&playlistID=21604642&p=0&bbg=262626&bth=262626&pfg=262626&lfg=262626&bt=ebebeb&pbg=ebebeb&pfgh=ebebeb&si=ebebeb&lbg=ebebeb&lfgh=ebebeb&sb=ebebeb&bfg=ff9900&pbgh=ff9900&lbgh=ff9900&sbh=ff9900" /><span><a href="http://grooveshark.com/search/playlist?q=Jazz%20and%20Chill%20Playlist%20Elizabeth%20Rothschild" title="Jazz and Chill Playlist by Elizabeth Rothschild on Grooveshark">Jazz and Chill Playlist by Elizabeth Rothschild on Grooveshark</a></span></object></object>
+        <iframe src="http://www.youtube.com/embed/videoseries?list=UUXIyz409s7bNWVcM-vjfdVA" width="300" height="170" frameborder="0"></iframe>-->
+    </div>
+    <p id="copyright">&copy; Made by Bernhard Mostrey</p>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        $('#settings').click(function () {
+            /*if ($('#container').hasClass('open')) {
+                $('#container').animate({
+                    height: '25px',
+                    width: '25px'
+                }, 300);
+                $('#container').removeClass('open');
+            } else {
+                $('#container').animate({
+                    height: '100%',
+                    width: '310px'
+                }, 300);
+                $('#container').addClass('open');
+            }*/
+           	$("#container").slideToggle();
+
+        });
+
+        $("audio").each(function(){
+            this.volume = 0.25;
+            if(this.id == "fire"){ this.volume = 1;}
+        });
+    </script>
+</body>
+</html>
